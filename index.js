@@ -11,4 +11,11 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(
+        <BrowserRouter>
+          <div>
+            <Route path="/posts" component={Posts}></Route>
+            <Route path="/profile" component={Profile}></Route>
+          </div>
+        </BrowserRouter>
+  , document.querySelector('.container'));
